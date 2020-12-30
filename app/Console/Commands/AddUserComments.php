@@ -47,13 +47,12 @@ class AddUserComments extends Command
 
         if($user){
             if(!empty($comment)){
-                $existingComments = $user->comments;
-                $user->comments = $existingComments.'\n'.$comment;
+                $user->comments .= "\n".$comment;
                 $user->save();
                 dump('OK');
             }
         }else{
-            dump('No such user ('.$userId.')');
+            dump('No such user (1)');
         }
     }
 }

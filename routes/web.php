@@ -20,4 +20,4 @@ Route::get('/', function () {
 
 Route::get('user/{id}','UserController@index');
 
-Route::post('user/{id}','UserController@update');
+Route::post('user','UserController@update');
